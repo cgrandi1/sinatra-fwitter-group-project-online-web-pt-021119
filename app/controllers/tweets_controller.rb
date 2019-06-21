@@ -75,7 +75,7 @@ class TweetsController < ApplicationController
       @tweet = Tweet.find(params[:id])
       binding.pry
       if @tweet && @tweet.user == current_user
-        @tweet.clear
+        @tweet.delete
         redirect to '/tweets'
       else
         redirect to '/tweets'
