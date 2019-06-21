@@ -384,6 +384,7 @@ describe ApplicationController do
         expect(page.status_code).to eq(200)
         expect(Tweet.find_by(:content => "tweeting!")).to eq(nil)
       end
+    end 
 
       # it 'does not let a user delete a tweet they did not create' do
       #   user1 = User.create(:username => "becky567", :email => "starz@aol.com", :password => "kittens")
@@ -413,3 +414,4 @@ describe ApplicationController do
       end
     end
   end
+end
