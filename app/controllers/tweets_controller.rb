@@ -40,8 +40,6 @@ class TweetsController < ApplicationController
       if is_logged_in?
         @tweet = Tweet.find(params[:id])
         if @tweet && @tweet.user == current_user
-          @tweets.clear
-          binding.pry
           erb :'tweets/edit'
         else
           redirect '/login'
