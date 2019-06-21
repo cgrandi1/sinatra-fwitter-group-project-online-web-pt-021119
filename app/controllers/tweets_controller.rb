@@ -39,7 +39,6 @@ class TweetsController < ApplicationController
     get '/tweets/:id/edit' do
       if is_logged_in?
         @tweet = Tweet.find(params[:id])
-        binding.pry
         if @tweet && @tweet.user == current_user
           @tweets.clear
           erb :'tweets/edit'
