@@ -75,7 +75,7 @@ class TweetsController < ApplicationController
     if current_user.tweets.include?(@tweet)
       Tweet.find(params[:id]).destroy
       erb :'/tweets/edit_tweet'
-    end
+    else 
       redirect '/tweets'
     end
   end
